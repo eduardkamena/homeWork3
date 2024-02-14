@@ -72,7 +72,7 @@ public class Main {
         byte weightOneIceCream = 100;
         byte egg = 4;
         byte weightOneEgg = 70;
-        int breakfastInGram = (bananas * weightOneBanana) + (milkMl / 2 * weightMilkPer100Ml) + (iceCream * weightOneIceCream) + (egg * weightOneEgg);
+        int breakfastInGram = (bananas * weightOneBanana) + (milkMl / 100 * weightMilkPer100Ml) + (iceCream * weightOneIceCream) + (egg * weightOneEgg);
         short gramInKilogram = 1000;
         float breakfastInKilogram = (float) breakfastInGram / gramInKilogram;
         System.out.println("Вес спортзавтрака в граммах = " + breakfastInGram);
