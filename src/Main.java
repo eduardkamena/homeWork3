@@ -46,8 +46,8 @@ public class Main {
         byte efficiencyPerMin = (byte) (bottle / time);
         short efficiencyPer20 = (short) (efficiencyPerMin * 20);
         short efficiencyPerDay = (short) (efficiencyPerMin * 24 * 60);
-        int efficiencyPer3Day = efficiencyPerMin * 3 * 24 * 60;
-        int efficiencyPer1Month = efficiencyPerMin * 30 * 24 * 60;
+        int efficiencyPer3Day = efficiencyPerDay * 3;
+        int efficiencyPer1Month = efficiencyPer3Day * 10;
         System.out.println("За 20 минут машина произвела " + efficiencyPer20 + " штук бутылок");
         System.out.println("За 1 день машина произвела " + efficiencyPerDay + " штук бутылок");
         System.out.println("За 3 дня машина произвела " + efficiencyPer3Day + " штук бутылок");
@@ -85,7 +85,7 @@ public class Main {
         int aimInGr = aimInKg * gramInKilogram;
         int daysPlanA = aimInGr / planLossGrA;
         int daysPlanB = aimInGr / planLossGrB;
-        float avPlan = (float) (planLossGrB + planLossGrA) / 2;
+        float avPlan = (planLossGrB + planLossGrA) / 2F;
         float avDays = (float) aimInGr / avPlan;
         System.out.println("Дней до достижения цели по плану A - " + daysPlanA);
         System.out.println("Дней до достижения цели по плану B - " + daysPlanB);
